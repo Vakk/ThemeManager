@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ThemeSwitcher</string>
+    <string name="blue_theme">Blue</string>
+    <string name="gray_theme">Gray</string>
+
+    <string-array name="list_view_items">
+        <item>test</item>
+        <item>test</item>
+        <item>test</item>
+    </string-array>
+</resources>
