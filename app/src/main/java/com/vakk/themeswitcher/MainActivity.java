@@ -41,7 +41,10 @@ public class MainActivity extends AppCompatActivity {
         mGridView.setAdapter( new ArrayAdapter<String>(getApplicationContext(),android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.list_view_items)));
     }
 
-     Handler handler = new Handler(new Handler.Callback() {
+    /**
+     * Wait for load all items to list view or grid view
+     */
+     private Handler handler = new Handler(new Handler.Callback() {
 
         @Override
         public boolean handleMessage(Message msg) {
@@ -54,7 +57,10 @@ public class MainActivity extends AppCompatActivity {
         }
     });
 
-    final Thread thread = new Thread(new Runnable() {
+    /**
+     * Thread for wait on load list view or grid view
+     */
+    private final Thread thread = new Thread(new Runnable() {
         @Override
         public void run() {
             boolean stop = false;

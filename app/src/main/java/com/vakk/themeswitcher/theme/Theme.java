@@ -47,11 +47,12 @@ public abstract class Theme {
     protected void invalidate(final Activity activity) {
         ActionBar actionBar = ((AppCompatActivity) activity).getSupportActionBar();
         if (mActionBarTheme != null) {
-
+            // draw text on action bar with needed color
             Spannable newTitle = new SpannableString(actionBar.getTitle());
             newTitle.setSpan(new ForegroundColorSpan(mActionBarTheme.getFontColor()), 0, newTitle.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
             actionBar.setTitle(newTitle);
             actionBar.setBackgroundDrawable(new ColorDrawable(mActionBarTheme.getBackgroundColor()));
+
 
             final ViewGroup viewGroup = (ViewGroup) activity.findViewById(android.R.id.content);
             viewGroup.getChildAt(0).setBackgroundColor(mBackground);
@@ -70,7 +71,7 @@ public abstract class Theme {
             if (child instanceof ViewGroup) {
                 Log.d(LOG_TAG, child.getClass().getCanonicalName() + " instance of ViewGroup");
 
-                //If you want set background color
+                //if you want set background color
                 if (child instanceof ListView) {
 
                     if (mListViewTheme != null) {
@@ -81,9 +82,9 @@ public abstract class Theme {
 
                 } else if (child instanceof GridView) {
                     if (mGridViewTheme != null) {
-                        child.setBackgroundColor(mGridViewTheme.getBackgroundColor());
-                        ((GridView) child).setVerticalSpacing(mGridViewTheme.getVerticalPadding());
-                        ((GridView) child).setHorizontalSpacing(mGridViewTheme.getHorizontalPadding());
+                        child.setBackgroundColor(mGridViewTheme.getBackgroundColor()); // set main background (divider)
+                        ((GridView) child).setVerticalSpacing(mGridViewTheme.getVerticalPadding()); // divider
+                        ((GridView) child).setHorizontalSpacing(mGridViewTheme.getHorizontalPadding()); // divider
                     }
 
                 }
@@ -94,7 +95,7 @@ public abstract class Theme {
                 Log.d(LOG_TAG, child.getClass().getCanonicalName());
                 if (child instanceof AppCompatTextView) { // if we have text view
                     Log.d(LOG_TAG, child.getClass().getCanonicalName() + child.getClass().getSimpleName() + " instance of AppCompactTextView");
-                    if (parent instanceof ListView) { // and parent is list view
+                    if (parent instanceof ListView) { //  if parent is list view - we on grid view item
 
                         if (mListViewTheme != null) {
                             // set params for child
@@ -103,7 +104,7 @@ public abstract class Theme {
                             ((TextView) child).setTypeface(null, mListViewTheme.getTextViewStyle().getTextStyle());
                         }
 
-                    } else if (parent instanceof AbsListView) { // if parent is grid view
+                    } else if (parent instanceof GridView) { // if parent is grid view - we on grid view item
 
                         Log.d(LOG_TAG, parent.getClass().getCanonicalName() + " instance of GridView");
                         if (mGridViewTheme != null) {
@@ -120,6 +121,7 @@ public abstract class Theme {
                         ((TextView) child).setTextColor(mTextViewTheme.getForeground());
 
                     }
+
                 } else if (child instanceof TextView) {
 
                     if (mGridViewTheme != null) {

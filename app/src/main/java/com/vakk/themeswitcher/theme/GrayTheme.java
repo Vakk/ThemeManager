@@ -12,7 +12,9 @@ import com.vakk.themeswitcher.theme.element.textview.WhiteTextView;
  */
 public class GrayTheme extends Theme {
 
-
+    /**
+     * int constructor you can use written templates
+     */
     public GrayTheme(){
         mActionBarTheme = new YellowActionBar();
         mTextViewTheme = new WhiteTextView();

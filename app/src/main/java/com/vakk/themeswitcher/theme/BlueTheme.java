@@ -13,6 +13,9 @@ import com.vakk.themeswitcher.theme.element.textview.YellowTextView;
  * Created by vakk on 4/6/16.
  */
 public class BlueTheme extends Theme {
+    /**
+     * @see GrayTheme
+     */
     public BlueTheme() {
         mActionBarTheme = new BlueActionBar();
         mTextViewTheme = new YellowTextView();

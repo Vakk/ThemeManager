@@ -8,12 +8,13 @@ import android.view.Menu;
  */
 public class ThemeManager {
 
-    protected static Theme mCurrentTheme;
 
-    private static ThemeManager instance;
+    protected static Theme mCurrentTheme;       // current set up theme
+
+    private static ThemeManager instance;       // theme manager instance (single tone)
 
     private ThemeManager(Activity activity) {
-        getTheme(activity);
+        getTheme(activity); // init theme manager
     }
 
 
@@ -28,15 +29,23 @@ public class ThemeManager {
             invalidate(activity);
             return mCurrentTheme;
         }
-        mCurrentTheme = new BlueTheme();
+        mCurrentTheme = new BlueTheme(); // default theme, because can be null pointer ex
         invalidate(activity);
         return mCurrentTheme;
     }
 
+    /**
+     * invalidate activity
+     * @param activity current activity
+     */
     public void invalidate(Activity activity){
         mCurrentTheme.invalidate(activity);
     }
 
+    /**
+     * invalidate menu
+     * @param menu current menu
+     */
     public void invalidate(Menu menu){
         mCurrentTheme.setMenu(menu);
         mCurrentTheme.invalidateMenu();
