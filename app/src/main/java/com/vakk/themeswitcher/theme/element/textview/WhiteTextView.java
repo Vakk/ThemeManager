@@ -14,42 +14,41 @@ public class WhiteTextView implements BaseTextView {
     private static int mFontSize = 10;
     private static int mTextStyle = Typeface.BOLD_ITALIC;
 
+    @Deprecated
     @Override
     public void setBackgroundColor(int color) {
 
     }
-
     @Override
     public int getBackGroundColor() {
         return BACKGROUND_COLOR;
     }
 
+    @Deprecated
     @Override
     public void setForeground(int color) {
 
     }
-
     @Override
     public int getForeground() {
         return FOREGROUND_COLOR;
     }
 
-
+    @Deprecated
     @Override
     public void setTextStyle(int style) {
         mTextStyle = style;
     }
-
     @Override
     public int getTextStyle() {
         return mTextStyle;
     }
 
+    @Deprecated
     @Override
     public void setFontSize(int fontSize) {
         mFontSize = fontSize;
     }
-
     @Override
     public int getFontSize() {
         return mFontSize;

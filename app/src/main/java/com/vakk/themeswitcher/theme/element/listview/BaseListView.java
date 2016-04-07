@@ -7,15 +7,19 @@ import com.vakk.themeswitcher.theme.element.textview.BaseTextView;
  */
 public interface BaseListView {
 
+    @Deprecated
     void setBackgroundColor(int textColor);
     int getBackgroundColor();
 
+    @Deprecated
     void setTextViewStyle(BaseTextView style);
     BaseTextView getTextViewStyle();
 
+    @Deprecated
     void setDividerHeight(int height);
     int getDividerHeight();
 
+    @Deprecated
     void setDividerColor(int color);
     int getDividerColor();
 }

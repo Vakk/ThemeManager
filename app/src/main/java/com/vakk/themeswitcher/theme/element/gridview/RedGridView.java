@@ -62,6 +62,7 @@ public class RedGridView implements BaseGridView {
         return mVerticalPadding;
     }
 
+    @Deprecated
     @Override
     public void setHorizontalPadding(int padding) {
         mHorizontalPadding = padding;

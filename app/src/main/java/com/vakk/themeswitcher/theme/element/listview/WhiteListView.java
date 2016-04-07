@@ -23,37 +23,36 @@ public class WhiteListView implements BaseListView {
     public void setBackgroundColor(int textColor) {
         mBackgroundColor = textColor;
     }
-
     @Override
     public int getBackgroundColor() {
         return mBackgroundColor;
     }
 
+    @Deprecated
     @Override
     public void setTextViewStyle(BaseTextView style) {
         mTextViewStyle = style;
     }
-
     @Override
     public BaseTextView getTextViewStyle() {
         return mTextViewStyle;
     }
 
+    @Deprecated
     @Override
     public void setDividerHeight(int height) {
         mDividerHeight = height;
     }
-
     @Override
     public int getDividerHeight() {
         return mDividerHeight;
     }
 
+    @Deprecated
     @Override
     public void setDividerColor(int color) {
         mDividerColor = color;
     }
-
     @Override
     public int getDividerColor() {
         return mDividerColor;

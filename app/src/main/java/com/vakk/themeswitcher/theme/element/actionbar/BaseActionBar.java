@@ -5,9 +5,10 @@ package com.vakk.themeswitcher.theme.element.actionbar;
  */
 public interface BaseActionBar {
     int getBackgroundColor();
-
+    @Deprecated
     void setBackgroundColor(int color);
 
     int getFontColor();
+    @Deprecated
     void setFontColor(int color);
 }

@@ -11,6 +11,7 @@ public class YellowTextView implements BaseTextView {
     private static int fontSize = 40;
     private static int textStyle = Typeface.ITALIC;
 
+    @Deprecated
     @Override
     public void setBackgroundColor(int color) {
 
@@ -21,26 +22,26 @@ public class YellowTextView implements BaseTextView {
         return 0;
     }
 
+    @Deprecated
     @Override
     public void setForeground(int color) {
 
     }
-
     @Override
     public int getForeground() {
         return Color.YELLOW;
     }
 
+    @Deprecated
     @Override
     public void setTextStyle(int style) {
-
     }
-
     @Override
     public int getTextStyle() {
         return textStyle;
     }
 
+    @Deprecated
     @Override
     public void setFontSize(int fontSize) {
 

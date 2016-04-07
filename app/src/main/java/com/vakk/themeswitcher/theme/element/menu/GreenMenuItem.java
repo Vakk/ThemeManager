@@ -20,6 +20,7 @@ public class GreenMenuItem implements BaseMenuItem {
         return mFontColor;
     }
 
+    @Deprecated
     @Override
     public void setBackgroundColor(int color) {
         mBackgroundColor = color;

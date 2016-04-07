@@ -38,6 +38,7 @@ public class BlackListView implements BaseListView {
         return mTextView;
     }
 
+    @Deprecated
     @Override
     public void setDividerHeight(int height) {
         mDividerHeight = height;
@@ -48,6 +49,7 @@ public class BlackListView implements BaseListView {
         return mDividerHeight;
     }
 
+    @Deprecated
     @Override
     public void setDividerColor(int color) {
         mDividerColor = color;
